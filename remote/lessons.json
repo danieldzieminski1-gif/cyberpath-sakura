@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "courses": [
+    {
+      "id": "modern2026",
+      "title": "Modern Threats 2026",
+      "subtitle": "Passkeys, AI agents and the quantum clock.",
+      "level": "Beginner",
+      "icon": "shield",
+      "modules": [
+        {
+          "id": "m26-live",
+          "title": "Fresh from the server",
+          "lessons": [
+            {
+              "id": "m26-voice",
+              "title": "Deepfake voice scams",
+              "summary": "Trust, but verify the caller",
+              "minutes": 4,
+              "blocks": [
+                { "type": "explanation", "id": "m26-v1", "title": "A familiar voice is no longer proof", "body": "AI voice cloning needs only a few seconds of audio. Scammers phone relatives or finance teams pretending to be someone they trust and ask for urgent money or codes. Urgency and secrecy are the red flags." },
+                { "type": "multipleChoice", "id": "m26-v2", "body": "Your boss calls in a panic and asks for an urgent gift-card purchase. Best first move?", "options": ["Hang up and call back on a number you already know", "Buy the cards, then check later", "Ask them to read out the card codes", "Reply on the same call with your password"], "answerIndex": 0, "explanation": "Calling back on a known number defeats voice cloning because the attacker does not control that line." },
+                { "type": "multipleChoice", "id": "m26-v3", "body": "Which habit protects a family best against voice-clone scams?", "options": ["A private family safe-word", "Posting more voice clips online", "Trusting caller ID", "Never answering unknown numbers only"], "answerIndex": 0, "explanation": "A pre-agreed safe-word is something a cloned voice cannot know." }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
