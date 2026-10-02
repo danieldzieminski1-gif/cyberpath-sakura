@@ -1,8 +1,5 @@
 name: Build Android APK
 
-# Builds a release APK on every push. Download it from:
-#  - the "Releases" page of your repo (easiest on a phone, no zip), or
-#  - Actions > the run > Artifacts.
 on:
   push:
     paths-ignore: ['**.md']
@@ -13,11 +10,11 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: write   # lets the job publish the APK as a GitHub Release
+  contents: write
 
 jobs:
   apk:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 40
     env:
       APK_NAME: CyberPath-build${{ github.run_number }}.apk
@@ -26,11 +23,10 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Set up Java 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
-          cache: gradle
 
       - name: Set up Flutter (stable)
         uses: subosito/flutter-action@v2
